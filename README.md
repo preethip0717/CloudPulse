@@ -24,6 +24,16 @@ CloudPulse is a dashboard project built using HTML, CSS, and JavaScript to pract
 ## Current Status
 The dashboard currently uses sample data. Integration with real AWS CloudWatch metrics is planned as a future improvement.
 
+## Screenshots
+
+### CloudPulse Dashboard
+
+![CloudPulse Dashboard](screenshots/CloudstatusDashboard.png)
+
+### CloudPulse CPU Utilization
+
+![CloudPulse Dashboard](screenshots/SampleCPUUtilization.png)
+
 ## Planned Improvements
 - Display actual EC2 CPU utilization using CloudWatch
 - Retrieve AWS metrics through a secure backend using AWS Lambda and API Gateway

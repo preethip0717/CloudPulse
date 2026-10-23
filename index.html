@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudPulse | Cloud Status Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">☁ CloudPulse</div>
+      <span class="demo-badge">DEMO DASHBOARD</span>
+    </header>
+
+    <main class="container">
+      <section class="welcome">
+        <p class="eyebrow">CLOUD INFRASTRUCTURE</p>
+        <h1>Cloud Status Dashboard</h1>
+        <p>Monitor your cloud resources from one place.</p>
+      </section>
+
+      <section class="summary-grid">
+        <article class="card">
+          <p>Total EC2 Instances</p>
+          <h2 id="instance-count">2</h2>
+          <span>Configured instances</span>
+        </article>
+
+        <article class="card">
+          <p>Service Health</p>
+          <h2 class="healthy">● Healthy</h2>
+          <span>Demo status</span>
+        </article>
+
+        <article class="card">
+          <p>CPU Utilization</p>
+          <h2 id="cpu-value">34%</h2>
+          <span>Sample metric</span>
+        </article>
+
+        <article class="card">
+          <p>Load Balancer</p>
+          <h2 class="healthy">● Active</h2>
+          <span>Demo status</span>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>EC2 Instances</h2>
+            <p>Example infrastructure inventory</p>
+          </div>
+          <span class="status-pill">2 Running</span>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Instance Name</th>
+                <th>Instance ID</th>
+                <th>Region</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="instance-table">
+              <tr>
+                <td>Web-Server-01</td>
+                <td>i-demo12345</td>
+                <td>us-east-1</td>
+                <td><span class="status-pill">● Running</span></td>
+              </tr>
+              <tr>
+                <td>Web-Server-02</td>
+                <td>i-demo67890</td>
+                <td>us-east-1</td>
+                <td><span class="status-pill">● Running</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>Resource Overview</h2>
+            <p>Sample CPU utilization</p>
+          </div>
+          <button id="refresh-btn">Refresh Demo Data ↻</button>
+        </div>
+
+        <div class="cpu-display">
+          <div class="cpu-number" id="cpu-large">34%</div>
+          <div class="cpu-track">
+            <div class="cpu-fill" id="cpu-bar"></div>
+          </div>
+          <p>Illustrative data only — not live AWS CloudWatch metrics.</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>CloudPulse · Built as an AWS learning project</p>
+        <p>Demo data only · Not connected to live AWS metrics</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
